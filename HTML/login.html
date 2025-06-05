@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="../IMAGES/logo" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/signup.css">
+</head>
+<body>
+   <div id="signup-container">
+    <form action="" novalidate>
+         <h1>Login</h1>
+         <div id="form-group">
+             <label for="username">Username</label>
+             <input type="text" name="username" id="username" placeholder="Enter your username" required>
+             <span class="error" id="uError"></span>
+         </div>
+         <div id="form-group">
+             <label for="mail">E-mail</label>
+             <input type="email" name="mail" id="mail" placeholder="Enter your mail-id" required>
+             <span class="error" id="mError"></span>
+         </div>
+         <div id="form-group">
+             <label for="password">Password</label>
+             <input type="password" name="password" id="password" placeholder="Enter your password" required>
+             <span class="error" id="pError"></span>
+         </div>
+         <div id="submit-btn">
+            <button type="submit">Login</button>
+         </div>
+         <div id="link">
+            Don't have an account? <a href="signup.html">Signup</a>
+         </div>
+    </form>
+   </div>
+   <script src="../Js/login.js"></script>
+</body>
+</html>
