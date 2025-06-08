@@ -32,28 +32,41 @@ body {
 
 .container{
     display: flex;
-    max-width: 850px;
+    max-width: 900px;
     width: 90%;
     min-height: 500px;
-    gap: 40px;
 } 
 
 .image-section{
     width: 50%;
-    height: 80vh;
     position: relative;
     box-shadow: 0px 0px 40px 10px var(--neon-color);
     border-radius: 30px;
 }
 
 .image-section img{
-   width: 100%;
-   height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 30px;
 }
 
+.form-section{
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
+.login-form h2{
+    font-size: 32px;
+    color: var(--neon-color);
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: zoomIn 0.8s ease-out;
+}
 
 .btn{
     width: 100%;
@@ -78,31 +91,49 @@ body {
     font-size: 18px;
 }
 
-
-
-
-
-
-
-.signup-form{
-    width: 60%;
-    height: 80%;
- 
+.google,
+.email{
+    background: var(--input-bg);
+    color: var(--white-color);
 }
 
-#login-form h2,
-.signup-form h2{
-    font-size: 26px;
+.google:hover,
+.email:hover{
+    background: var(--hover-bg); 
+}
 
-    animation: zoomIn 0.8s ease-out;
+
+.terms{
+    font-size: 12px;
+    margin-top: 30px;
+    color: var(--gray-color);
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+.terms a{
+    color: var(--white-color);
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .form-header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
     margin: 5px 0 5px 0;
+}
+
+.signup-form,
+.signin-form{
+    display: none;
+}
+
+.signup-form h2,
+.signin-form h2{
+    font-size: 26px;
+    animation: zoomIn 0.8s ease-out;
 }
 
 .input-group{
@@ -129,22 +160,9 @@ body {
 .input-group:nth-child(4) {
     animation-delay: 0.8s;
 }
-.input-group:nth-child(5) {
-    animation-delay: 0.8s;
-}
-.input-group:nth-child(6) {
-    animation-delay: 0.8s;
-}
-.input-group:nth-child(7) {
-    animation-delay: 0.8s;
-}
-.input-group:nth-child(8) {
-    animation-delay: 0.8s;
-}
-
 
 .input-group input{
-    width: 80%;
+    width: 100%;
     padding: 12px;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid var(--white-color);
@@ -156,13 +174,9 @@ body {
 
 .input-group i{
     position: absolute;
-    right: 99px;
+    right: 12px;
     font-size: 16px;
     color: var(--gray-color);
-}
-#submit-btn{
-    width: 100%;
-    
 }
 
 input{
@@ -233,19 +247,6 @@ input.invalid{
 .switch-form a:hover{
     box-shadow: 0 0 10px var(--neon-color);
 }
-.terms{
-    font-size: 12px;
-    margin-top: 30px;
-    color: var(--gray-color);
-    opacity: 0;
-    animation: fadeUp 0.8s ease-out forwards;
-}
-
-.terms a{
-    color: var(--white-color);
-    text-decoration: underline;
-    font-weight: bold;
-}
 
 .neon-btn{
     padding: 15px 30px 15px 30px;
@@ -260,7 +261,6 @@ input.invalid{
     overflow: visible;
     transition: 0.5s;
     text-decoration: none;
-    width: 80%;
 }
 
 .neon-btn::before{

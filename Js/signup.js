@@ -5,7 +5,9 @@ let email = document.getElementById("mail");
 let passwords = document.getElementById("password");
 let ConfirmpassWords = document.getElementById("confirm-password");
 let Number = document.getElementById("number");
-
+document.getElementById("LogInLink").addEventListener("click", function() {
+    window.location.href = "login.html"; // Redirect to login page
+});
 // Number Validation
 
 
@@ -37,19 +39,7 @@ form.addEventListener('submit', (e) => {
   }
 
   // Last Name Validation
-  let lastName = lName.value.trim();
-  let lastNameLength = lastName.length;
-  lEroor.innerText = "";
-  if (!lastName) {
-    lEroor.innerText = `last name required`;
-    valid = false;
-  } else if (lastNameLength < 3) {
-    lEroor.innerText = `length should be more than 3`;
-    valid = false;
-  } else if (lastNameLength > 15) {
-    lEroor.innerText = `length should not exceed 15`;
-    valid = false;
-  }
+lastName = lName.value.trim();
 
   // Password Validation
   let password = passwords.value.trim();

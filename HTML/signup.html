@@ -5,50 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
-    <link rel="shortcut icon" href="../IMAGES/logo" type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+
+<link rel="stylesheet" href="../CSS/signup.css">
     <link rel="stylesheet" href="../CSS/output.css">
     <link rel="stylesheet" href="../CSS/signup.css">
 </head>
 <body>
-    
-   <div id="signup-container" class="bg-gray-800">
-    <form action="" novalidate>
-         <div id="form-group">
-             <label for="">First Name</label>
+  
+   
+   <div id="signup-container" class="container">
+      <div class="image-section">
+            <img src="../image/assets_task_01jx5xbvzkfd88p8dm9y0wptqc_1749324078_img_1.webp">
+        </div>
+    <form action="" novalidate class="signup-form">
+         <h2>Create Your Account</h2>
+                <div class="form-header">
+                    <i class="ri-arrow-left-line back-btn"></i>
+                    <p class="switch-form">Already have an account? <a id="LogInLink">Log In</a></p>
+                </div>
+         <div id="form-group" class="input-group">
+          
              <input type="text" name="first-name" id="first-name" placeholder="Enter your first name" required>
+                 <i class="ri-user-fill"></i>
+                 <br>
              <span class="error" id="fError"></span>
          </div>
-         <div id="form-group">
-             <label for="">Last Name</label>
-             <input type="text" name="Last-name" id="last-name" placeholder="Enter your Last name" required>
-               <span class="error" id="lError"></span>
+         <div id="form-group" class="input-group">
+              
+        
+      
+             <input type="text" name="Last-name" id="last-name" placeholder="Enter your Last name" >
+                 <i class="ri-user-fill"></i>
+              
          </div>
-         <div id="form-group">
-             <label for="">Number</label>
+         <div id="form-group" class="input-group">
+         
              <input type="number" name="number" id="number" placeholder="Enter your number" required>
+                    <i class="ri-phone-fill"></i>
+                    <br>
                <span class="error" id="nError"></span>
          </div>
-         <div id="form-group">
-             <label for="">E-mail</label>
+         <div id="form-group" class="input-group">
+             
              <input type="email" name="mail" id="mail" placeholder="Enter your mail-id" required>
+                <i class="ri-mail-fill"></i>
+                <br>
                <span class="error" id="mError"></span>
          </div>
-         <div id="form-group">
-             <label for="">password</label>
+         <div id="form-group" class="input-group">
+            
              <input type="text" name="password" id="password" placeholder="Enter your password" required>
+                 <i class="ri-lock-fill"></i>
                <span class="error" id="pError"></span>
          </div>
-         <div id="form-group">
-             <label for="">Confirm password</label>
+         <div id="form-group" class="input-group">
+          
              <input type="text" name="confirm-password" id="confirm-password" placeholder="Enter your confirm password" required>
+                 <i class="ri-lock-fill"></i>
                <span class="error" id="cpError"></span>
         </div>
-       <div id="submit-btn">
-        <button> signup</button>
-       </div>
-       <div id="link">
-        already have an account? <a href="login.html">Login</a>
-       </div>
+
+        <button class="neon-btn"> signup</button>
+           <p class="terms">By signing in, you agree to Generative AI’s 
+                    <a href="#">Terms of Service</a>, 
+                    <a href="#">Privacy Policy</a>, and 
+                    <a href="#">Data Usage Provisions</a>.
+                </p>
+  
+      
        
     </form>
    </div> 

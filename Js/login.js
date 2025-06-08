@@ -1,30 +1,21 @@
 // Function to validate the form inputs
     const form = document.querySelector('form');
-    const username = document.getElementById('username');
-    const mail = document.getElementById('mail');
-    const password = document.getElementById('password');
-    const uError = document.getElementById('uError');
+ 
+    const mail = document.getElementById('loginEmail');
+    const password = document.getElementById('loginPass');
+
     const mError = document.getElementById('mError');
     const pError = document.getElementById('pError');
+    document.getElementById("SignUpLink").addEventListener("click", function() {
+        window.location.href = "signup.html"; // Redirect to signup page
+    });
 
     form.addEventListener('submit', (e) => {    
         e.preventDefault();
         let valid = true;
         // Username Validation
-        let userFirstName = username.value.trim();
-        let userFirstNameLength = userFirstName.length;
-
-        uError.innerText = "";
-        if (!userFirstName) {
-            uError.innerText = `Username is required`;
-            valid = false;
-        } else if (userFirstNameLength < 3) {
-            uError.innerText = `Username should be more than 3 characters`;
-            valid = false;
-        } else if (userFirstNameLength > 15) {
-            uError.innerText = `Username should not exceed 15 characters`;
-            valid = false;
-        }
+      
+    
         // Email Validation
         let userEmail = mail.value.trim();
         mError.innerText = "";
@@ -53,7 +44,6 @@
         if(valid){
             let loginData =
             {
-                username: userFirstName,
                 email: userEmail,
                 password: userPassword
             };
@@ -67,11 +57,10 @@
             
             
            if (
-  loginData.username === signupData.useFirstName &&
   loginData.email === signupData.useEmail &&
   loginData.password === signupData.usePassword
 ){
- alert("Login successful");
+ alert(`welcome ${signupData.useFirstName}`);
  window.location.href = "Home.html"; // Redirect to home page after successful login
                 console.log("Login successful");
             }else {
