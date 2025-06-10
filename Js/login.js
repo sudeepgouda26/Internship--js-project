@@ -9,6 +9,9 @@
     document.getElementById("SignUpLink").addEventListener("click", function() {
         window.location.href = "signup.html"; // Redirect to signup page
     });
+    document.querySelector(".back-btn").addEventListener("click", function() {
+        window.location.href = "User.html"; // Redirect to home page
+    });
 
     form.addEventListener('submit', (e) => {    
         e.preventDefault();

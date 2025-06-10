@@ -8,6 +8,9 @@ let Number = document.getElementById("number");
 document.getElementById("LogInLink").addEventListener("click", function() {
     window.location.href = "login.html"; // Redirect to login page
 });
+    document.querySelector(".back-btn").addEventListener("click", function() {
+        window.location.href = "login.html"; // Redirect to home page
+    });
 // Number Validation
 
 
